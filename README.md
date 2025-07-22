@@ -49,6 +49,23 @@ pedidohub-projeto/
    ```docker compose up --build```
 
 -------------------------------------------------------------
+
+## 5. Acesso ao Swagger UI dos microsserviços:
+
+### Tabela de Endpoints e Swagger UI dos Microsserviços
+
+Após rodar o docker-compose, todos os microsserviços ficam disponíveis nas seguintes portas e URLs para consulta e teste dos endpoints (via Swagger UI):
+
+| Microsserviço      | Porta no Host | URL Swagger UI                                  |
+|--------------------|:-------------:|-------------------------------------------------|
+| cliente-service    |     8081      | http://localhost:8081/swagger-ui.html           |
+| produto-service    |     8082      | http://localhost:8082/swagger-ui.html           |
+| estoque-service    |     8083      | http://localhost:8083/swagger-ui.html           |
+| pedido-service     |     8084      | http://localhost:8084/swagger-ui.html           |
+| pedido-receiver    |     8085      | http://localhost:8085/swagger-ui.html           |
+| pagamento-service  |     8086      | http://localhost:8086/swagger-ui.html           |
+-------------------------------------------------------------
+
 ## ⚙️ Serviços Orquestrados
 
 - PostgreSQL (banco de dados)

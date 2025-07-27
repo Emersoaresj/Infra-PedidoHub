@@ -84,10 +84,10 @@ services:
       SERVER_PORT: 8083
       PRODUTO_SERVICE_URL: http://produto-service:8082
 
-  pedido-service:
+  pedido-receiver:
     build:
-      context: ../pedido-service
-    container_name: pedido-service
+      context: ../pedido-receiver
+    container_name: pedido-receiver
     ports:
       - "8084:8084"
     depends_on:
@@ -102,10 +102,10 @@ services:
       PRODUTO_SERVICE_URL: http://produto-service:8082
       CLIENTE_SERVICE_URL: http://cliente-service:8081
 
-  pedido-receiver:
+  pedido-service:
     build:
-      context: ../pedido-receiver
-    container_name: pedido-receiver
+      context: ../pedido-service
+    container_name: pedido-service
     ports:
       - "8085:8085"
     depends_on:

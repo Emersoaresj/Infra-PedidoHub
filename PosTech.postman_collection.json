@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "199678f8-8d31-4e46-8cce-e28ebb7d6de5",
+		"name": "PosTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37388607"
+	},
+	"item": [
+		{
+			"name": "PedidoHub",
+			"item": [
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "Criar Cliente",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n  \"nomeCliente\": \"Emerson Soares Jeronimo\",\r\n  \"cpfCliente\": \"11122233367\",\r\n  \"dataNascimento\": \"1999-06-19\",\r\n  \"logradouro\": \"Rua Manuel Bordalo Pinheiro\",\r\n  \"numeroEndereco\": \"26\",\r\n  \"complementoEndereco\":\"B\",\r\n  \"cep\": \"05850-230\",\r\n  \"bairro\": \"Parque Santo Antonio\",\r\n  \"cidade\": \"São Paulo\",\r\n  \"estado\": \"SP\"\r\n}"
+								},
+								"url": {
+									"raw": "{{localhost8081}}/api/clientes/cadastrar",
+									"host": [
+										"{{localhost8081}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"cadastrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Cliente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n  \"nomeCliente\": \"Emerson S Jeronimo\",\r\n  \"dataNascimento\": \"1999-06-19\",\r\n  \"logradouro\": \"Rua Manuel Bordalo Pinheiro\",\r\n  \"numeroEndereco\": \"26\",\r\n  \"complementoEndereco\":\"B\",\r\n  \"cep\": \"05850-230\",\r\n  \"bairro\": \"Parque Santo Antonio\",\r\n  \"cidade\": \"São Paulo\",\r\n  \"estado\": \"SP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/clientes/cpf/39633925843",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"cpf",
+										"39633925843"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/clientes/cpf/39633925843",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"cpf",
+										"39633925843"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Lista Clientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/clientes",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Cliente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/clientes/cpf/12345678910",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"clientes",
+										"cpf",
+										"12345678910"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Produto",
+					"item": [
+						{
+							"name": "Criar Produto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nomeProduto\": \"Apple Iphone 16 Pro\",\r\n  \"skuProduto\": \"AP-IPH-001\",\r\n  \"precoProduto\": 5999.90\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost8082}}/api/produtos/cadastrar",
+									"host": [
+										"{{localhost8082}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"cadastrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Lista Produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/produtos",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"produtos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Produto SKU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/produtos/sku/AP-IPH-001",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"sku",
+										"AP-IPH-001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Produto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nomeProduto\": \"Apple Iphone 13 Pro\",\r\n  \"precoProduto\": 6000.90\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/produtos/atualizar/AP-IPH-002",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"atualizar",
+										"AP-IPH-002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/produtos/deletar/AP-IPH-002",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"deletar",
+										"AP-IPH-002"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Estoque",
+					"item": [
+						{
+							"name": "Criar Estoque",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"skuProduto\": \"AP-IPH-001\",\r\n  \"quantidadeEstoque\": 10\r\n}"
+								},
+								"url": {
+									"raw": "{{localhost8083}}/api/estoques/cadastrar",
+									"host": [
+										"{{localhost8083}}"
+									],
+									"path": [
+										"api",
+										"estoques",
+										"cadastrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Estoque por SKU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/estoques/AP-IPH-002",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"estoques",
+										"AP-IPH-002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Estoques",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/estoques",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"estoques"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Estoque",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/estoques/atualizar/AP-IPH-001?novaQuantidade=5",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"estoques",
+										"atualizar",
+										"AP-IPH-001"
+									],
+									"query": [
+										{
+											"key": "novaQuantidade",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Estoque",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/estoques/AP-IPH-002",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"estoques",
+										"AP-IPH-002"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pedidos",
+					"item": [
+						{
+							"name": "Pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cpfCliente\": \"11122233367\",\r\n    \"itens\": [\r\n        {\r\n            \"skuProduto\": \"AP-IPH-001\",\r\n            \"quantidadeItem\": 2\r\n        }\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost8084}}/api/pedidos",
+									"host": [
+										"{{localhost8084}}"
+									],
+									"path": [
+										"api",
+										"pedidos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Pedidos por CPF Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost8080}}/api/pedidos/cliente/11122233367",
+									"host": [
+										"{{localhost8080}}"
+									],
+									"path": [
+										"api",
+										"pedidos",
+										"cliente",
+										"11122233367"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Pedidos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost8080}}/api/pedidos",
+									"host": [
+										"{{localhost8080}}"
+									],
+									"path": [
+										"api",
+										"pedidos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Pedido",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost8080}}/api/pedidos/2",
+									"host": [
+										"{{localhost8080}}"
+									],
+									"path": [
+										"api",
+										"pedidos",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
